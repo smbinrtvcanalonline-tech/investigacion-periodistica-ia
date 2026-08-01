@@ -1,0 +1,21 @@
+{
+  "proyecto": "Investigacion Periodistica IA",
+  "pais": "Peru",
+  "idioma": "espanol",
+  "especialidad": [
+    "periodismo de investigacion",
+    "transparencia publica",
+    "analisis documental",
+    "fiscalizacion"
+  ],
+  "normativa": {
+    "usar_solo_normas_vigentes": true,
+    "verificar_actualizaciones": true,
+    "evitar_normas_derogadas": true
+  },
+  "analisis": {
+    "nivel_detalle": "profesional",
+    "evitar_relleno": true,
+    "priorizar_evidencia": true
+  }
+}
