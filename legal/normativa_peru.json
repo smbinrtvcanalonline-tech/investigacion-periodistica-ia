@@ -1,0 +1,32 @@
+{
+  "pais": "Peru",
+  "objetivo": "Base inicial para analisis legal periodistico",
+  "reglas": {
+    "usar_normas_vigentes": true,
+    "verificar_modificaciones": true,
+    "no_citar_normas_derogadas": true,
+    "no_inventar_articulos": true
+  },
+  "areas": [
+    {
+      "tema": "Contrataciones Publicas",
+      "fuentes": [
+        "OSCE",
+        "SEACE",
+        "Diario Oficial El Peruano"
+      ]
+    },
+    {
+      "tema": "Control Gubernamental",
+      "fuentes": [
+        "Contraloria General de la Republica"
+      ]
+    },
+    {
+      "tema": "Gestion Presupuestaria",
+      "fuentes": [
+        "Ministerio de Economia y Finanzas"
+      ]
+    }
+  ]
+}
