@@ -1,0 +1,27 @@
+{
+  "name": "Investigacion Periodistica IA",
+  "description": "Flujo inicial para análisis automatizado de documentos públicos",
+  "version": "1.0",
+  "steps": [
+    {
+      "name": "Recepción de documento",
+      "type": "input",
+      "description": "Carga de PDF, Word o Excel"
+    },
+    {
+      "name": "Analisis documental IA",
+      "type": "ai_analysis",
+      "description": "Extracción y evaluación de información"
+    },
+    {
+      "name": "Detector de riesgos",
+      "type": "risk_analysis",
+      "description": "Identificación de posibles inconsistencias"
+    },
+    {
+      "name": "Generador de informe periodístico",
+      "type": "report",
+      "description": "Creación de borrador de investigación"
+    }
+  ]
+}
