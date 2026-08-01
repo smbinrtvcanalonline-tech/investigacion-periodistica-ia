@@ -1,42 +1,85 @@
-# Sistema Principal
-# Investigación Periodística IA
+# ==================================================
+# SISTEMA DE INVESTIGACIÓN PERIODÍSTICA IA
 # SMBINRTV
+# Orquestador principal
+# ==================================================
 
 from analizador_pdf import analizar_pdf
 from resumen_ia import generar_resumen
 from detector_riesgos import detectar_riesgos
+from verificador_normativo import verificar_norma
+from analizador_economico import analizar_presupuesto
+from generador_noticia import generar_noticia
 
 
-def ejecutar_investigacion(documento):
+def ejecutar_investigacion(documento, datos_presupuesto):
 
-    print("=== INVESTIGACIÓN PERIODÍSTICA IA ===")
+    print("=" * 50)
+    print("INVESTIGACIÓN PERIODÍSTICA IA")
+    print("=" * 50)
 
-    print("\n1. Analizando documento...")
-    analisis = analizar_pdf(documento)
 
-    print(analisis)
+    print("\n[1] Analizando documento PDF...")
+    analisis_pdf = analizar_pdf(documento)
 
-    print("\n2. Generando resumen...")
+
+    print("\n[2] Generando resumen...")
     resumen = generar_resumen(documento)
 
-    print(resumen)
 
-    print("\n3. Detectando riesgos...")
+    print("\n[3] Detectando posibles riesgos...")
     riesgos = detectar_riesgos(documento)
 
-    print(riesgos)
 
-    return {
-        "analisis": analisis,
+    print("\n[4] Verificando marco legal...")
+    marco_legal = verificar_norma(
+        "Normativa peruana vigente"
+    )
+
+
+    print("\n[5] Analizando presupuesto...")
+    analisis_economico = analizar_presupuesto(
+        datos_presupuesto
+    )
+
+
+    print("\n[6] Generando noticia...")
+    
+    informe = {
+        "documento": analisis_pdf,
         "resumen": resumen,
-        "riesgos": riesgos
+        "riesgos": riesgos,
+        "legal": marco_legal,
+        "economico": analisis_economico
     }
+
+
+    noticia = generar_noticia(
+        informe
+    )
+
+
+    return noticia
+
 
 
 if __name__ == "__main__":
 
-    archivo = "documento_prueba.pdf"
 
-    resultado = ejecutar_investigacion(archivo)
+    documento_prueba = "expediente.pdf"
 
-    print("\nProceso terminado.")
+
+    presupuesto = {
+        "pim": 1000000,
+        "devengado": 300000
+    }
+
+
+    resultado = ejecutar_investigacion(
+        documento_prueba,
+        presupuesto
+    )
+
+
+    print("\nRESULTADO FINAL")
+    print(resultado)
