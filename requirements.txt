@@ -1,0 +1,9 @@
+pypdf
+python-docx
+openpyxl
+pandas
+requests
+fastapi
+uvicorn
+streamlit
+python-multipart
